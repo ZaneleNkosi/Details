@@ -1,3 +1,45 @@
+@import url('https://fonts.googleapis.com/css?family=Lato|Pacifico|Righteous|Roboto+Condensed|Ubuntu|Open+Sans+Condensed');
+
 page-home {
+    ion-title {
+        margin-top: 40vh;    
+    }
+
+    h1{
+        color: white;
+        font-family: 'Righteous';
+        font-weight: bold;
+        font-size: 50px;
+    }
+
+    .bg{
+        background-image: url('../assets/imgs/camera.jpg');
+        background-repeat: no-repeat; 
+        background-position: center;
+        background-size: cover;
+    }
+
+    .hello{
+        color:rgb(218, 157, 203);
+    }
+
+    .butt{
+        margin-left: 130px;
+        width: 200px;
+        background-color: rgb(83, 14, 67);
+    }
+
+    .item{
+        margin-top: 10px;
+        background: transparent;
+        padding: 10px;
+        margin: 10px auto;
+        color: white;
+        
+    }
+    .list{
+        height: 400px;
+        padding: 20px;
+    }
 
 }

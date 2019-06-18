@@ -1,14 +1,28 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
-</ion-header>
+<ion-content padding center text-center class="bg">
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <ion-title><h1><span class="hello">Hello</span> World</h1></ion-title>
+
+  <ion-list>
+    <form #dataForm="ngForm" (ngSubmit)="onSubmit(dataForm.value)" [formGroup] = "formgroup">
+    <ion-item>
+        <ion-label floating>Name</ion-label>
+      <ion-input type="text" formControlName="name" ngModel name="name"></ion-input>
+
+      <ion-item *ngIf="name.hasError('required') && name.touched">
+          <p>*Name is required</p>
+        </ion-item>
+    </ion-item>
+
+    <ion-item>
+        <ion-label floating>Surname</ion-label>
+      <ion-input type="text" formControlName="surname" ngModel name="surname"></ion-input>
+
+      <ion-item *ngIf="surname.hasError('required') && surname.touched">
+          <p>*Surname is required</p>
+        </ion-item>
+    </ion-item>
+
+    <button ion-button full class="butt">login</button>
+  </form>
+  </ion-list>
 </ion-content>
